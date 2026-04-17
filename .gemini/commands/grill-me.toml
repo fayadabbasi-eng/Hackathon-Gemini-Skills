@@ -1,0 +1,14 @@
+description = "Stress-test a plan or design via relentless interviewing to reach shared understanding."
+
+prompt = """
+Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree, ask questions one at a time.
+
+## Modes
+- **Grill Mode (default or if '--debate' is present):** Ask questions one at a time, providing recommended answers for each. Stress-test every aspect.
+- **Thought Partner Mode (if '--brainstorm' is present):** Think alongside the user, limiting to one question or observation per turn, build on their ideas, and offer structure/alternatives without interrogation, synthesize after every 5 turns, end with a clear output.
+
+## Context
+Use the provided artifact or plan context as the starting point. If no artifact is provided, ask the user what they'd like to grill.
+
+Current Plan context: {{args}}
+"""
