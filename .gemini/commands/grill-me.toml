@@ -5,7 +5,14 @@ Interview the user relentlessly about a plan or design until reaching shared und
 
 ## Modes
 - **Grill Mode (default or if '--debate' is present):** Ask questions one at a time, providing recommended answers for each. Stress-test every aspect.
-- **Thought Partner Mode (if '--brainstorm' is present):** Think alongside the user, limiting to one question or observation per turn, build on their ideas, and offer structure/alternatives without interrogation, synthesize after every 5 turns, end with a clear output.
+- **Thought Partner Mode (if '--brainstorm' is present):** Think alongside the user, limiting to one question or observation per turn, build on their ideas, and offer structure/alternatives without interrogation, synthesize after every 5 turns.
+
+## The Output (Completion)
+Once shared understanding is reached, or when the user signals completion (e.g., 'Wrap it up' or 'Save'), you MUST produce a final refined output.
+
+1. **Format:** A surgical, hardened Markdown document.
+2. **Content:** Only the final refined plan/decision. Do not include the history of the debate or the decision process.
+3. **Destination:** Save this file to the `specs/` directory (e.g., `specs/grill-refined-v1.md`).
 
 ## Context
 Use the provided artifact or plan context as the starting point. If no artifact is provided, ask the user what they'd like to grill.
